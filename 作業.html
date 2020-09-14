@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const randA = () => {
+        array = [];
+        for (let i = 0; i < 6; i++) {
+          n = Math.round(Math.random() * (38 - 1)) + 1;
+          if (array.indexOf(n) >= 0) {
+            i -= 1;
+          } else {
+            array += `${n} `;
+          }
+        }
+
+        return array;
+      };
+
+      const randB = () => {
+        return Math.round(Math.random() * (8 - 1)) + 1;
+      };
+
+      document.write(" A區 " + randA() + "<br>");
+      document.write(" B區 " + randB());
+    </script>
+  </body>
+</html>
